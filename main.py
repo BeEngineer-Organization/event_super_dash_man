@@ -180,7 +180,7 @@ class Enemy:
 class App:
     def __init__(self):
         pyxel.init(WIDTH, HEIGHT)
-        pyxel.load("assets/scene/scene.pyxres")
+        pyxel.load("scene.pyxres")
         self.scene = SCENE_TITLE
         # BGM
         pyxel.sounds[0].set(
@@ -234,7 +234,7 @@ class App:
 
     def game_settings(self):
         pyxel.image(0).rect(0, 80, 16, 8, TRANSPARENT_COLOR)
-        self.boy = Boy(0, 96)
+        self.boy = Boy(0, 0)
         spawn_coin(0, 127)
         spawn_enemy(0, 127)
         pyxel.run(self.update, self.draw)
@@ -250,7 +250,7 @@ class App:
         scroll_x = 0
 
     def restart_game(self):
-        self.boy = Boy(0, 96)
+        self.boy = Boy(0, 0)
 
     def update_title_scene(self):
         if pyxel.btnp(pyxel.KEY_SPACE):

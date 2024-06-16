@@ -180,7 +180,7 @@ class Enemy:
 class App:
     def __init__(self):
         pyxel.init(WIDTH, HEIGHT)
-        pyxel.load("scene.pyxres")
+        pyxel.load("./scene.pyxres")
         self.scene = SCENE_TITLE
         # BGM
         pyxel.sounds[0].set(

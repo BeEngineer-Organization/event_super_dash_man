@@ -267,6 +267,7 @@ class App:
                 enemy.update()
             if check_goal(self.boy.x, self.boy.y):
                 self.scene = SCENE_RESULT
+                pyxel.play(3, 5)
                 pyxel.stop(0)
                 pyxel.play(1, 2, loop=True)
         elif self.boy.status == BOY_STATUS_DEAD:
